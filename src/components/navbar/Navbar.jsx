@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation"
 import styles from "./Navbar.module.css"
 import { usePathname } from "next/navigation"
-import {setCookie} from "../../app/cookie"
+import {setCookies} from "../../app/cookie"
 function Navbar() {
   const pathname = usePathname()
   const router = useRouter()
@@ -18,7 +18,7 @@ function Navbar() {
     console.log(c)
     const newpath = c.join('/')
     console.log(newpath)
-    setCookie('lang', locale)
+    setCookies('lang', locale)
     router.push(`/${newpath}`)
   }
 

@@ -6,6 +6,7 @@ let locales = ["en", "bs"];
 function getLocale(request) {
   // Pokušaj pročitati jezik iz kolačića
   const cookieLang = getCookies("lang");
+
   if (cookieLang && locales.includes(cookieLang)) {
     return cookieLang;
   }
