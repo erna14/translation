@@ -19,15 +19,8 @@ function Navbar() {
     console.log(c)
     const newpath = c.join('/')
     console.log(newpath)
-    
-
     router.push(`/${newpath}`)
   }
-
-  {/*const renderPath = () => {
-    const language = handleLanguageChange()
-    router.push
-  }*/}
 
   return(
     <div className={styles.container}>
