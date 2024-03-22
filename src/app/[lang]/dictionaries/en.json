@@ -1,0 +1,10 @@
+{
+  "home": {
+    "header": "My Translation",
+    "paragraph": "What's up guy. Welcome to my Next.js Page!"
+  },
+  "about": {
+    "paragraph": "This is my About us page"
+  }
+}
+
