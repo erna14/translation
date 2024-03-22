@@ -10,8 +10,16 @@ function Navbar() {
 
   const handleLanguageChange = (locale) => {
     console.log(pathname)
-    const newpath = pathname.split('/').pop().join('/')
-    router.push(`/${locale}${newpath}`)
+    const asas = '/'
+    const a = asas.split('/').filter(val => !!val)
+    console.log(a)
+    const b = a.slice(1, a.length)
+    console.log(b)
+    const c = [locale, ...b]
+    console.log(c)
+    const newpath = c.join('/')
+    console.log(newpath)
+    router.push(`/${newpath}`)
   }
 
   return(
