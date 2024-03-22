@@ -1,13 +1,12 @@
 "use client"
 import { useRouter } from "next/navigation"
 import styles from "./Navbar.module.css"
-import Link from "next/link"
 import { usePathname } from "next/navigation"
-
+import {setCookie} from "../../app/cookie"
 function Navbar() {
   const pathname = usePathname()
   const router = useRouter()
-
+  
   const handleLanguageChange = (locale) => {
     console.log(pathname)
     const asas = `/${pathname}`
@@ -19,6 +18,7 @@ function Navbar() {
     console.log(c)
     const newpath = c.join('/')
     console.log(newpath)
+    setCookie('lang', locale)
     router.push(`/${newpath}`)
   }
 
