@@ -3,12 +3,14 @@ import { useRouter } from "next/navigation"
 import styles from "./Navbar.module.css"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { setCookie } from "@/utils/cookies"
 
 function Navbar() {
   const pathname = usePathname()
   const router = useRouter()
 
   const handleLanguageChange = (locale) => {
+    setCookie('preferredLanguage', locale, { expires: 365 });
     console.log(pathname)
     const asas = `/${pathname}`
     const a = asas.split('/').filter(val => !!val)
