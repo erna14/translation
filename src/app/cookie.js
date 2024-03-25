@@ -1,5 +1,7 @@
 import { setCookie } from "cookies-next";
 
 export const setCookies = (name, value, days) => {
-  setCookie(name, value);
+console.log('vakue', value)
+  if (typeof document === "undefined") return 
+  document.cookie =  `lang=${value}`;
 };

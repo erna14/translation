@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { getCookies, setCookies } from "./app/cookie";
-import { cookies } from "next/headers";
 let locales = ["en", "bs"];
 
 function getLocale(request) {
