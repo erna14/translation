@@ -18,7 +18,8 @@ function Navbar() {
     console.log(c)
     const newpath = c.join('/')
     console.log(newpath)
-    setCookies('lang', locale)
+
+    set
     router.push(`/${newpath}`)
   }
 
